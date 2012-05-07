@@ -1,0 +1,626 @@
+\documentclass[12pt]{report}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
+\usepackage{listings}
+\usepackage[super]{natbib}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\newcommand{\te}[1]{\textrm{#1}}
+\newcommand{\tf}[2]{\frac{\textrm{#1}}{\textrm{#2}}}
+\newcommand{\fb}[1]{\textrm{\framebox{$#1$}}}
+\newcommand{\hlin}[0]{\underline{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  }}
+
+		% Define block styles
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=7em, text centered, minimum height=4em]
+\tikzstyle{block2a} = [rectangle, draw, fill=yellow!20, 
+    text width=7em, text centered, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{block1} = [rectangle, draw, fill=blue!20, 
+    text width=5.5em, text centered, rounded corners, minimum height=2em]
+    \tikzstyle{blocka} = [rectangle, draw, fill=red!20, 
+    text width=5.5em, text centered, minimum height=4em]
+\tikzstyle{blocke} = [rectangle, draw, fill=green!20, 
+    text width=5.5em, text centered, minimum height=4em]
+\tikzstyle{blocka1} = [rectangle, draw, fill=red!20, 
+    text width=21.0em, text centered, minimum height=4em]
+\tikzstyle{blockr} = [rounded rectangle, draw, fill=white!40, 
+    text width=6em, text centered, minimum height=2em]
+\tikzstyle{block2} = [rectangle, fill=white!40, 
+    text width=7em, text centered, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+
+
+\title{ES/CS 96: Harvard Library Special Collections}
+\author{Matthew Newman \and  Anna Patel \and Jean Shiao \and Stacey Lyne \and Dario Sava \and Megan Fazio \and Andrew Spielvogel \and Ryan Neff \and Spencer Chan \and Morgan Paull \and Tonatiuh Lievano Beltran \and Michael Galli \\ \\ \\ \\ \\ \\ \\ \\ \underline{Teaching Staff}\\ \\ Professor Stuart Shieber\\ Teaching Fellows Bryan Kate and Bjoern Andres}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Introduction}
+
+\paragraph{} Our class, Engineering Sciences and Computer Science 96, was assigned the problem of examining the Harvard library special collections this semester with the hope of helping to eliminate the problem of a huge backlog. This backlog consists of items, including manuscripts,  books, sheet music and cassette tapes, that are in the possession of the libraries but have not been processed and are not available for access by the patrons of the library.  Estimates place the height of this backlog at five miles, which is roughly the height of Mount Everest. It is thus not an exaggeration to say that we were brought in to examine a problem the size of Mount Everest. This problem may not be visible to the casual user of the reading rooms, who can request an item and receive it in less than fifteen minutes; however, those fifteen minutes do not account for the months and sometimes years the items languish in the backlog, and the patrons of the libraries suffer for their absence. Throughout this semester, there were two questions that guided our thinking: What accounts for this problem? Are there tools that can address this problem and improve the utility of these collections? What follows is our attempt to address these questions.
+
+	\section{Library Goals}
+		\paragraph{}In the first steps of our research into the special collections, our most critical task was understanding the purpose of these collections. From our interviews with several members of the Harvard library staff, we pinpointed four specific goals: access, discovery, indexing, and preservation. 
+		\paragraph{}The first goal, access, involves a library- and user-friendly organizational schema. This ensures that the items can be found easily both within the library and by society at large. If this goal is achieved, priceless and valuable historical objects, when taken into the library, do not disappear: those who work in the library can find the items, and the public can view them and work with them. 
+		\paragraph{}The second goal, discovery, is the enabling of users to discover and distribute information, in order to spread knowledge to as many people as possible. 
+		\paragraph{}The third goal, indexing, mandates that the library subscribe to an organizational style that enables its users to find relationships among similar items and to easily locate items. 
+		\paragraph{}The fourth and final goal of the special collections is preservation: to keep the items in a sustainable state for future generations.  Since the special collections serve as a repository that stores an invaluable wealth of information spread out over hundreds and thousands of years, it is important that all of these historical materials are preserved. 
+		\paragraph{}Overall, the special collections contribute to the overarching theme of enabling scholarship at Harvard University and beyond. 
+	\section{Use of the Harvard Special Collections}
+	
+		\subsection{What are the materials used for?}
+			\paragraph{}The materials abundant in each of the unique Harvard collections represent extremely cherished and useful historical resources. There are four main uses for the materials: research; classes; gaining more materials; and overall historical preservation.
+			\paragraph{}Researchers consult Harvard special collections materials for a number of purposes, such as finding the perfect source for their paper, dissertation, article, or media project, tracing a family's genealogy, or even catching a glimpse of Pablo Neruda's sketches. 
+			\paragraph{}Harvard classes also use these materials. By wandering into the lobby of Houghton or Schlesinger, an observer is likely to stumble upon a group of undergraduates or graduates. English professors regularly have their students examine editions from Lewis Carroll and Charles Dickens. General Education students also use materials from Schlesinger Library for classes on Cold War culture, and History and Literature concentrators examine old cookbooks. In fact, libraries have seen a surge in user access especially with the implementation of the new General Education program.
+			\paragraph{}Additionally, Harvard's special collections are self-perpetuating. When the libraries acquire historic collections such as the John Updike collection and handle them properly, other private individuals with collections see that Harvard is a trustworthy and safe and productive place for their materials. As more special collections come in, Harvard's visibility as an archival resource increases, and thus so do the number of special collections. 
+			\paragraph{}The final use of the special collections is historical preservation. The special collections libraries keep items safe in a climate-controlled environment, and give items attention should they start to degrade. By keeping items safe, the Harvard special collections serve as a repository of knowledge for future generations. 
+			\paragraph{}From these uses, a common theme emerges: Harvard's Special Collections are widely used {\em because they are there}. They are accessible and useful, have survived through the ages, and are continually used today.
+		\subsection{Who uses these materials?}
+			\paragraph{}Around half of the Houghton and Schlesinger users come from the large and diverse Harvard community. In the Harvard community, a mix of graduates, undergraduates, and faculty use the special collections. In Schlesinger especially, the rise of the General Education program has resulted in an increase in undergraduate use. 
+			\paragraph{}Outside of the Harvard community, most of the users who come into Houghton and Schlesinger are those seeking a graduate degree or those who already have doctorates. Occasionally, some of the general population not affiliated with the academic world might use the special collections, but that is a rare occurrence. \cite{2}\cite{3}
+
+	\section{Current workflow}
+		\paragraph{}To bring invaluable material from every corner of the globe into the Harvard community, the special collection libraries direct items down a pre-determined path. 
+		\paragraph{}Our goals in studying the current archival workflow were to understand how archivists work and how we could help them make better use of their time by speeding up the workflow.
+		\paragraph{}The current flow of an item can be represented by a series of four stages:
+
+%Tikz workflow
+{\center
+\begin{tikzpicture}[node distance = 2cm, auto]
+%Place Nodes
+\node [block] (A) {Acquisition};
+\node [block,right of=A, node distance=3.5cm] (B) {Pre-Processing};
+\node [block,right of=B, node distance=3.5cm] (C) {Processing};
+\node [block,right of=C, node distance=3.5cm] (D) {Access\\ Maintenance\\ Digitization};
+% Draw edges
+\path [line] (A) -- (B);
+\path [line] (B) -- (C);
+\path [line] (C) -- (D);
+
+\end{tikzpicture}
+}		
+	
+		\subsection{Acquisition}
+%Tikz workflow		
+{\center
+\begin{tikzpicture}[node distance = 2cm, auto]
+%Place Nodes
+\node [block2a] (A) {Acquisition};
+\node [block,right of=A, node distance=3.5cm] (B) {Pre-Processing};
+\node [block,right of=B, node distance=3.5cm] (C) {Processing};
+\node [block,right of=C, node distance=3.5cm] (D) {Access\\ Maintenance\\ Digitization};
+% Draw edges
+\path [line] (A) -- (B);
+\path [line] (B) -- (C);
+\path [line] (C) -- (D);
+
+\end{tikzpicture}
+}			
+	
+	\paragraph{}The acquisition phase is the first step of making an item available to researchers. During this phase, the item is passed from its previous owner to Harvard, and there are many ways that items come into Harvard: purchase, bequest, and donation.
+	
+\paragraph{}One method of acquisition is by purchasing the item with endowment money. Most items that are purchased come from auction houses or vendors.\cite{7} Curators form relationships with these establishments to ensure that the library is kept up-to-date on incoming materials. Usually, the vendor delivers a catalogue of items to the library, and curators select items from this catalogue. Catalogues generally include a description of the item, and this description is generally a reputable primary source for the acquisition record.\cite{7} Sometimes, items are also available through private sales. $\langle$ See: Updike acquisition$\rangle$ Although curators have the power to purchase items impromptu, normally an advisory board reviews purchases.\cite{8} In Schlesinger for instance, this board consists of a group of seven or eight people including curators, the head of the department, archivists, a digital librarian, and Marilyn Dunn. \cite{8} According to Susan Pzynski, associate librarian for technical services at Houghton Library, there are tens of millions of dollars worth of purchased items in the Houghton backlog. \cite{4}
+\paragraph{}Another method of acquisition is a bequest. A person of historical significance may leave many of his or her personal papers or materials to Harvard as a means of preserving these valuable resources. Unfortunately, when collections acquired in this manner tend to have very little information. This results in a greater burden on archivist's time because of the time needed to extrapolate information on the collection.
+\paragraph{}The final method of acquisition is a charitable gift. Charitable gifts comprise one-third of the materials that the library receives. In addition, if the donor wishes to use the items for tax-exempt purposes, Houghton and Schlesinger require that the donor pay for a third party appraisal of the donation so that the donor receives the tax benefit. Items that come in through donations often stay in the special collections, whether or not they are redundant. Donors donate their items with the understanding that the library will keep the items over time. Also, because the donation endows the donor with tax benefits, the Internal Revenue Service (I.R.S.) requires that the library must keep all donated items for at least two years.\cite{7}
+\paragraph{}There are many complications associated with the acquisition stage. Items need to be rigorously checked for authenticity to eliminate the possibility that an item is a forgery.\cite{7}  Privacy is also a serious legal concern during this stage. For example, many items, such as manuscripts or correspondences, can contain personal information that should be kept private. Sometimes a donor might require that names, certain instances, or dates are redacted from collections. In other circumstances, a collection cannot be viewed by the public until all extended family members of those mentioned in the item are deceased.\cite{8} In this case, an archivist must be able to maintain records of the people involved. Because this sort of collection might only be viewable by the public fifty or sixty years after it was acquired, this can also be very difficult to manage.
+\paragraph{}At the end of the acquisition stage, items exist in the backlog with no stub record, which contains the most necessary information: donor information, size, date acquired, physical location. Fortunately, this backlog is very small for items coming in today, since archivists are very good at immediately moving items to the second step of the workflow. However, many items in the backlog were acquired before the special collections instituted the mandatory stub assignment. Thus, though the current backlog between acquisition and pre-processing is very small, the past backlog is believed to be very large, and there are no numbers for how many materials sit in this backlog.	
+		\subsection{Pre-processing}
+%Tikz workflow
+{\center
+\begin{tikzpicture}[node distance = 2cm, auto]
+%Place Nodes
+\node [block] (A) {Acquisition};
+\node [block2a,right of=A, node distance=3.5cm] (B) {Pre-Processing};
+\node [block,right of=B, node distance=3.5cm] (C) {Processing};
+\node [block,right of=C, node distance=3.5cm] (D) {Access\\ Maintenance\\ Digitization};
+% Draw edges
+\path [line] (A) -- (B);
+\path [line] (B) -- (C);
+\path [line] (C) -- (D);
+
+\end{tikzpicture}
+}			
+
+\paragraph{}Once the item moves past acquisition, it enters the pre-processing phase. Here, the main objective is to know what is in the library's possession. In this stage, certain collections get prioritized over others. Since the libraries spend tens of millions of dollars acquiring many materials that are in this backlog between acquisition and pre-processing, and since it is impossible for Harvard to have sufficient time and resources to process all materials as they enter, materials must be prioritized. This order of priority can be determined by either a study of historical use of a similar collection or by a prediction of future patterns of popularity. During this stage, the libraries will ship some items to the Harvard Depository, since storage within Harvard libraries is limited. At this point in time, items are available in HOLLIS. Though they lack detailed metadata, the HOLLIS record does contain with basic collection information and donor records; the collection is labelled as ``unprocessed".
+\paragraph{}At Houghton Library, four people are involved in acquisition and pre-processing, creating a total of 3.5 full time employees (FTE): the curator and curator's assistant, who are responsible for determining the worth of the collection; the bill payer, who manages the exchange of money; and the accessioner, who spends on average 20 hours per week on the Acquisition team.\cite{7} At Schlesinger Library, there are 2.5 FTEs assigned to this task. \cite{8}
+		
+		\subsection{Processing \cite{6}}
+%Tikz workflow
+{\center
+\begin{tikzpicture}[node distance = 2cm, auto]
+%Place Nodes
+\node [block] (A) {Acquisition};
+\node [block,right of=A, node distance=3.5cm] (B) {Pre-Processing};
+\node [block2a,right of=B, node distance=3.5cm] (C) {Processing};
+\node [block,right of=C, node distance=3.5cm] (D) {Access\\ Maintenance\\ Digitization};
+% Draw edges
+\path [line] (A) -- (B);
+\path [line] (B) -- (C);
+\path [line] (C) -- (D);
+
+\end{tikzpicture}
+}
+
+\paragraph{}After a stub record is created for this item, it enters a backlog between pre-processing and processing, where items have a stub record but have no other in-depth data. This is where, due to the time-consuming nature of the current methods, bottlenecking presents a major problem to the efficiency of the Harvard special collections. The overall goal of processing currently revolves around the creation of a finding aid, which idealistically contains the identification and description of every item in a particular collection. The goal of processing is to describe the organization of a collection or to give organization with as little imposition as possible. 
+\paragraph{}Processing can be an extremely time-consuming step in the archival workflow due to the many steps that are involved:\\
+\begin{center}
+\includegraphics[width=120mm]{currentwf2.jpg}
+\end{center}
+
+\paragraph{}In this stage, the archivist looks at each box of the collection. The archivist adheres to a ``two minute rule" per box, where he or she spends only two minutes surveying the materials. He or she does a survey of the collection in order to understand the origin, size, shape, and existing organizational scheme of the collection. The archivist then develops his or her own processing plan for this specific collection.
+\paragraph{}Once the archivist mentally prepares this plan, he or she begins to go through the items, looking for any that need special attention. The archivist may need to remove rusted staples or paperclips, isolate acidic material and materials in need of conservation, photocopy damaged or acidic documents, and unfold papers.
+\paragraph{}Next, the collection is physically sorted into various series. The archivist physically lays out each item of the collection, which often involves touching each item multiple times. This process can be especially problematic for fragile materials whose quality is damaged with each handling of the item. In addition, most archivists take care to organize correspondences and compositions during this step, in order to make entering the metadata faster. This organization can be done alphabetically or by date, or within date alphabetically or vice versa. Unfortunately, items in a collection are often re-sorted when new information is made available, but this can be very difficult for an archivist who maintains most of the order mentally in her mind. In this stage, the archivist also removes duplicates which need not be processed and eventually places the items into acid-free folders. In addition, the archivist hand-writes a description of the contents on the folder; a different department will print out labels later on. The archivist then indexes these folders into archiving containers. Once the items are in boxes and folders, the archivist assigns a control number to each part of the collection in order to keep track of the physical location of the items. 
+\paragraph{}The next step of the processing stage is describing. If electronic records reach this stage of the process, they get run through a virus scan before the describing begins. The archivist adheres a checklist in order to fully describe the contents of a collection (see Appendix). He or she writes the description in an XML document, which is, in many instances, several thousand lines long. The archivist also manually enters data about each folder's contents, which is often a time-consuming process, and does not delve down into the item level. 
+\paragraph{}The final step of processing is cataloguing, which is the process of uploading the XML file into online databases like OASIS and HOLLIS so that they will be available for online search by researchers. This step also involves redacting and putting permissions on collections.
+		
+		\subsection{Access, maintenance, and digitization}
+			\paragraph{}The final stage of the workflow can be divided into three simultaneous stages: access, maintenance, and digitization.These stages are ongoing after the collection has been processed, and actions for these stages can occur whenever required and can sometimes be done multiple times throughout the lifetime of the materials. 
+%Tikz workflow
+{\center
+\begin{tikzpicture}[node distance = 2cm, auto]
+%Place Nodes
+\node [block] (A) {Acquisition};
+\node [block,right of=A, node distance=3.5cm] (B) {Pre-Processing};
+\node [block,right of=B, node distance=3.5cm] (C) {Processing};
+\node [block2a,right of=C, node distance=3.5cm] (D) {Access\\ Maintenance\\ Digitization};
+% Draw edges
+\path [line] (A) -- (B);
+\path [line] (B) -- (C);
+\path [line] (C) -- (D);
+\end{tikzpicture}
+}
+			
+			\subsubsection{Access}
+				\paragraph{}Access is arguably the most pivotal aspect of the special collections workflow in allowing the library to achieve its primary goal. It is at this point that the archivist's work manifests itself to the researcher. An important distinction must be made between the components that allow for full access. The first is discovering, which can be considered as the ``finding" of the material. The second is retrieval, which can be considered as the ``getting" of the object.
+				\paragraph{}Discovery is the first step. For most cases, the patron finds an item by looking through a collection's finding aid. Researchers can view finding aids by use of online tools, which can be one of many online databases like HOLLIS, OASIS, or VIA. There is also the ``Ask a Librarian" tool which allows researchers to get direct help from librarians in locating the items that they are looking for. 
+				\paragraph{}The second aspect of access is retrieval, which consists of the user viewing the item itself. This must usually be done within the library, though some material are digital and can be viewed online. For nondigitized material, the researcher must make a request to the library.  This is usually done using Aeon, an online service that users must register for.\cite{9} Besides retrieval of requested items, the library is also responsible for monitoring the Reading Room. Here, researchers can interact with the boxes they request and take pictures of items for future use. Items are not permitted to leave the Reading Room. However, researchers are allowed to take pictures of the items.
+			\subsubsection{Maintenance}
+				\paragraph{}Now that the collection has been properly processed, another important step is maintenance. While in use, if items are noted to be deteriorating by patrons or reading room librarians, they receive the attention of the conservationist. Many times this discovery of deteriorating items is by chance, as containers are not searched through regularly due to shear quantity of items. If the item is in especially poor condition, the item will be digitize. This process will be discussed within access in the next section.
+				\paragraph{}Maintenance also consists of updating records. This is necessary as expired copyrights have to be lifted and privacy restrictions change over time. Although, the date that information and restrictions must be changed is recorded, updating of the record often only occurs once a person specifically asks about an item or if a librarian stumbles upon the expired information.\cite{10} Another aspect of maintenance is the editing of finding aids after they have been uploaded to the database to correct for errors or to add information about the collection that may be found later.\cite{6}
+			\subsubsection{Digitization}
+				\paragraph{}Digitization is the process of creating digital copies of the physical items. This occurs in the following cases: if the item is anticipated to be a popular item, if a user requests an image of the item, if a donor requests the item be digitized, if the item appears to be deteriorating and needs to be preserved via an image, or if a grant is supplied to the library for a particular set of materials. In order to get digital copies made for an item, the library must send the item to the Digitization Lab which creates a preservation-quality photo of the item. The image is stored in the Digital Repository Service (DRS).
+				\paragraph{}When an object is sent to the Digitization Lab, the item must be camera-ready. Within the ``Dig Lab", the item will either be digitized by a standard procedure or must undergo a customized process. The standard  process can be used for sturdy and regular sized materials for which no extra attention is required, and is faster and cheaper. These items may include letters in good condition or specific pages in books. For items that are particularly fragile or over-sized, the slower and more expensive lab is required.\cite{11}
+				\paragraph{}Once the Digitization Lab is done taking the preservation quality pictures, it sends a confirmation email containing the digitized items information to the library. These emails are often hundreds of items long without any automated parsing options available for the archivists who receive them. The information in them must then be copy and pasted into separate forms.\cite{4} DRS then links the photos through HOLLIS and OASIS, and this link is viewable by users.
+	\section{Current issues}
+	\paragraph{}Although we were first asked to provide a solution for eliminating the backlog, in examining the current archival system in greater detail, we observed several other issues that will also be addressed. 
+		\subsection{Extensive backlog}
+			\paragraph{}The success of the Harvard Special Collections library database stems from its invaluable scope of research materials. However, over decades of procuring collections, the Harvard library has amassed content without having the resources to process the research materials as they are acquired. Consequently, a backlog of unprocessed materials has been created which prevents full access to these materials. 
+			\paragraph{}This can be seen from the prevalence of requests for access to the materials that still lack finding aids, descriptions, sorting, or general organization. In the last decade, there have been 5,518 requests for unprocessed materials. This is an equivalent of 1.518 requests made daily on average, showing that many of these unprocessed materials are in current demand by researchers.\cite{3} This is emphasized by the fact that without finding aids and full catalog entries these materials are not easily discoverable. It's important to keep in mind that there are also some items in the backlog which have absolutely no records, and thus have no way of being discovered. Houghton has a backlog of roughly 15,000 linear feet of unprocessed material \cite{7}, and Schlesinger has a backlog of material which includes approximately 60,000 photos. Although it is impossible to accurately determine the size of the entire Harvard Special Collections backlog due to numerous materials not having records, current estimates are that it is roughly 5 linear miles.
+		\subsection{Limited search and discovery}
+			\paragraph{}Another problem that arises from the extensive collection of items offered by the Special Collections is the lack of user-friendly search capabilities for researchers. While one of the main goals of the Harvard Special Collections is to offer prolific access to its materials, the inconvenience of searching for items through the finding aids can prevent students from maximizing the benefits of the Special Collections. Since the collections are spread throughout several different databases, such as HOLLIS, OASIS, and VIA, it is difficult for the average user to exhaust all of these resources in the search for particular reference materials. Many of these databases even cross–reference each other, and so the existence of multiple databases without the capacity of a single all-encompassing search engine can be both confusing and inefficient for users. Currently, researchers must have a fairly specific idea of the material they wish to find as well as which collection it is located in. This is a great hindrance to accidental discovery because it is very difficult to find valuable material by searching general topics with the current system.
+			%\paragraph{}An example of the complications resulting from the current search engine can be seen in an experience that defined the jumping point for our class's investigation. During the first week of our class, each student was given the assignment of finding an object of interest from one of the Special Collections at Harvard. In our notebooks, we recorded the specifics of the process used to discover the materials found while also noting all of our thoughts regarding the discovery process. Many of us were first-time users who took the chance to understand how the Harvard Special Collections database worked while getting a glimpse of the vast array of materials available to us.One of the students began his search with the intent of finding Thoreau's ``Civil Disobedience" drafts in Houghton. From the Hollis website, he ventured into the Harvard Libraries website, where he was re-directed to OASIS. Then, when he typed ``Thoreau and Civil Disobedience" into the keyword search and clicked on one of the results, he found a link to a static finding aid and was able to look through the items in the collection. After being linked to a reference in Houghton that did not exist, he backtracked and eventually found the items he was looking for as records \#14 and \#16 in the finding aid.When he found the items in the finding aid, the next step was to physically obtain the items for viewing in Houghton. Upon entering the reading room, one of the first things he had to do was sign a reader contract. Next, he had to sign up as an authorized reader while one of the librarians explained how the request system worked. In order to request the item, he had to pull up the reading guide again from OASIS and manually searched for the HOLLIS record based on the title. After clicking the `Request Item' option, he then had to correct the pre-filled form, which had incorrectly entered some information, and then waited ten minutes while one of the librarians retrieved the folders containing the drafts.One of the sentiments he expressed, which many other students with similar experiences shared, was that there were many tedious steps involved in both the request and retrieval processes. It took him almost an hour to attain the item despite having a clear, preconceived idea in his mind of the particular item he was looking for. Another thought he had was that many of the steps could have been streamlined, making the process more efficient and less time-consuming. 
+			\paragraph{}With his adventures as a representative sample of our first experiences with the Special Collections, our class used this assignment to gain the understanding that helping the library grant researchers full access to materials will require more than just eliminating the backlog. 
+		\subsection{Static nature of finding aids}
+			\paragraph{}While finding aids have defined the traditional library search engine and are effective tools for listing all of the different items in a collection, one of the main inconveniences of a finding aid, like the one provided on the Special Collections pages, is that there are only a limited number of access points from which users can find specific items. A feature that is lacking within the system, and which would greatly aid in the discovery of useful material, is a way for researchers to find materials that relate to an item that they have already found. There is no efficient method for them to view all of the interconnections between items in order to discover new material that might aid in their research. The only possible method to find related materials is to look at which items are near it in the finding aid. Unfortunately, finding aids are sorted linearly, and in a permanent order. For example, if items in a finding aid are organized by type, such as by correspondence, and then sorted by name alphabetically, then this means that items from the same year cannot be listed together. This one-dimensional sorting can make it very difficult for users to find new material. Given the previous example, one could search through the finding aid for all items within the same time period, but this can be time-consuming, especially when considering that some finding aids can extend over hundreds of pages long. Just as the sample library search assignment had shown above, the student had to manually scroll through the items in the finding aid to find the specific drafts that he was looking for. To account for this system which does not connect specific items between different finding aids, archivists try to help the researchers by manually listing collections that are closely related and by manually adding subject headings to the finding aid, a process which can take a great deal of time. 
+			\paragraph{}Since the finding aid is very extensive, it takes a long period of time and thought from the archivists  to develop. Although archivists are good at finding relationships between objects, they simply cannot account for all of the relationships with a static finding aid. Therefore, information is lost from the linear sorting that privileges on only one dimension of metadata. This is a waste of the archivists extensive knowledge of the collection, and also requires that the archivists spend a lot of time in deciding which arrangement will be the most optimal.
+			\paragraph{}Another potential issue is that finding aids historically do not share the same  format, which makes compatibility slightly more complicated when the system is based on static finding aids.
+		\subsection{Other problems: privacy concerns, process redundancies, deterioration of materials, lack of digitization, lack of user input, ergonomics}
+			\paragraph{}In our exploration of the current workflow of the library archival process, we determined that there were several other components that raise librarians' concerns. One of the predominant issues revolves around privacy, since many items are particular about access. While some collections simply need minute scourging for personal names or details that need to be removed before being accessed by researchers, a grueling task that demands much time from its archivists, other collections lack records in an adequate system that can track when items will become available for access. For example, for many Schlesinger collections, some materials cannot be accessed until a certain date or a certain condition is met.\cite{8} The libraries are very strict about protecting donor privacy and meeting all conditions about restrictions, however, there is no rigorous system for lifting these restrictions. Archivists acknowledged that some materials which were no longer required to be restricted would sometimes be withheld from researchers because the record had not been updated.\cite{10}
+			\paragraph{}The deterioration of materials is another problem that was raised as a general concern. Since audiovisual material cannot be preserved for more than ten years, archivists need to ensure that the content on tapes, videos, and other recordings is saved within a pressing period of time.\cite{10} A/V materials are slightly more complicated to process, because they involve time spent on listening to recordings, searching for information, and fast-forwarding or rewinding to summarize content for the finding aids. Meanwhile, since there is no effective software that can accurately transcribe information, archivists must manually listen to hours of audio. The problem of deterioration further emphasizes the necessity of tackling the backlog to ensure that the valuable materials it contains are preserved before they are lost completely. 
+			\paragraph{}Unfortunately for many researchers who would benefit from access to images online, there are very few items that have digital versions. In the Schlesinger library, less than 1\% of items have been digitized.\cite{12} While archivists can see the value in digitizing objects, such as correspondence or manuscripts, for online view, there are many complications regarding digitization that make it too costly and time consuming for it to be done for every item. Digital versions of the items are placed in the Digital Repository Service, which is a storage, preservation, and retrieval system. However, the DRS has high standards for its quality of pictures, and these standards prevent archivists from simply uploading images or users from taking and contributing their own photos to the database. Digitization can cause a delay by creating a new backlog for images since each image will have to be sent to the Digitization Lab and individually scanned. As well, the cheapest price for digitizing a page is 35 cents, but more time intensive items can cost \$3-8 per item. Some particularly difficult items can cost even more.\cite{11} 
+			\paragraph{}Several other issues raised include the lack of user statistics available to librarians, archivists, and curators from surveys and voluntary response. This information is valuable in that it enables the libraries to make the most informed decisions about the materials they make available for access, as well as providing the material in a manner that best meets the library patrons needs.  
+			\paragraph{}Librarians, especially in Schlesinger, raised concerns about the design of storage facilities being detrimental to the preservation of materials and to ergonomics. For the former, when items are taken out of storage to be used in the Reading Room, they are exposed to alternating conditions of hot and cold, which can damage the delicate nature of many preserved materials. For the latter, the task of retrieving requests can be especially strenuous, since much of the retrieval process involves physically moving aisles and climbing up ladders to get boxes. Often, multiple boxes need to be obtained, since collections or items of interest can span many shelves. Consequently, librarians may need to push carts of several boxes across different buildings and floors while minimizing the time that researchers spend waiting in the Reading Room, a task that can be physically taxing..
+	\section{Contributing factors: Insufficient Scale Up, Time of Physical Arrangement, Process Redundancies, Underutilization of Technology}
+		\paragraph{}Although we were able to identify several issues with the current library special collections system, we keyed in on the underlying causes that would be most effective in tackling the three problems which we believe most greatly prevent the libraries from fully providing access to materials: the backlog, limited search and discover, and static finding aids. Our conclusion was that many of the inefficiencies that result in the build-up in the archival workflow were caused by the following fundamental factors. 
+		\paragraph{}The first is that too much time is spent on redundant tasks. A grievance for archivists is the repetitive, time-consuming tasks that prevent them from using their talents most efficiently. There are many tasks such as labeling folders, taking information from forms and emails, and searching for names in databases, which must be done in exactly the same way for multiple items. One example of this is emails that come from the Digitization Lab which confirm that an item has been digitized. The email contains information which must then be copied and pasted individually into another form.  Although tasks such as these are simple, they are laborious, and because they must be done for thousands of items over hundreds of collections, it accounts for a large amount of archivists' time.
+		\paragraph{}This can also be attributed to the second underlying problem, which is an underutilization of technology. Many of these repetitive, time consuming tasks could be automated by computers. The limited search functions are also the result of the system not fully leveraging the power of technology.  
+		\paragraph{}Finally, although finding aids are the primary means for users to discover items, their main purpose is to aid in the physical finding of the object for retrieval. The items must then be physically arranged in the same order that they are listed in the finding aid. Physically rearranging items accounts for most of the time spent processing the collection. Because archivists must try to accommodate for the relationships that are lost by linear sorting, they attempt to arrange items in the most meaningful order. However, as they learn more about the collection, they may change their mind about what arrangement conveys the most information about the collection. This often results in archivists having to physically re-organize the materials to new folders and boxes. This further adds to the time spent on processing each collection, and further adds to the backlog. 
+
+\chapter{Our Focus Area}
+		\paragraph{}We want to address the problems that most prevent the special collections from realizing their goal, which is granting library patrons the full research potential of the special collections. Our aim is to help archivists do what they do best: analyze collections, and find relationships between items. For our course, we have chosen to target the challenges of an archivist's repetitive routine and its time-consuming nature by using the power of technology. Our goal is not to replace the archivists but to eliminate some of the more repetitive tasks that prevent archivists from utilizing their abilities fully. With the intention of helping archivists as much as possible, we also aimed to create a solution that addresses as many of the additional issues as possible.
+
+\chapter{Solution}
+		\paragraph{}After spending several weeks of the course mapping the current workflow as well as gathering various opinions and concerns from the archivists, we devoted the rest of our semester to designing a solution that would address many of the problems introduced above while keeping in mind the overall goal of the Harvard Special Collections.
+	\section{New Workflow}
+		\paragraph{}One of our first changes to the current system was an altered workflow that minimized many of the repetitive tasks that archivists were engaging in. Our ultimate goal in our changed workflow was to allocate the archivist's valuable time to the most valuable processes. Our new workflow compared side-by-side with the current existing workflow is represented in the diagram below.
+	%Comparing the two processing workflows
+	\begin{center}
+	\includegraphics[width=170mm]{comparewf.jpg}
+	\end{center}
+		\subsection{Simultaneous image uploading}
+			\paragraph{}One of the most striking characteristics of our new workflow is that digitization occurs simultaneously with foldering the items. In our design, images taken by a camera are automatically uploaded into our search engine, where archivists add item and collection metadata. When archivists touch each page, taking a quick picture of the item enables more information to be incorporated into the item identification process and does not slow the process down. These uploaded images allow users to see what is available, and to determine if it is worth it to request the item in person. 
+			\paragraph{}In addition, image-taking as a concurrent step in the workflow process refines the idea of current digitization techniques. While these images are not preservation- or publication-quality, our creation of digital facsimiles enables users to gather sufficient information from items that they discover online. This process does not replace the high-quality digitization that the DigLab currently supplies, but it does enable users to find new material and to see items before requesting them.
+		\subsection{Digital sorting}
+			\paragraph{}Our new archival workflow also involves a new conception of sorting. The current system of physical arrangement consumes the majority of the time spent processing new materials; in its place, we imagined a new system of digital sorting that would eliminate the tedious physical act of moving items. 
+			\paragraph{}In order to store the physical locations of items, we associate each item with its folder and box. We accomplish this tracking via an automated system that reads in unique identification codes printed on every box and folder. The image, box identification code and folder identification code are then grouped together and sent to the server where it is available for editing.
+			\paragraph{}We then connect the database, which at this point holds images and location codes, with Ruby on Rails in order to handle data manipulation and to allow user input. We also created dynamic relationships between items, since the static finding aid, as discussed previously, is unable to take into account all dimensions by which items in a collection can be sorted.  Without the need for both the determination of an ideal order and the physical sorting of items, archivists can spend more time with the items themselves. This new design also enables the patrons of the special collections to decide how they want to view the items, giving the user more powerful capabilities. 
+		\subsection{Versatility}
+			\paragraph{}The goal of our design is to digitize each item in order to guarantee its accessibility and usability as immediately as possible. Additionally, in our new workflow archivists can choose between two methods depending on their preferences: they can add data in parallel to taking the pictures; or they can add data in series. In other words, archivists could chose to alternate taking pictures with adding data, or take many pictures and add all of the data later. Archivists could even choose to utilize other people to take the pictures for them! These options enable archivists to adapt to our new workflow in the way that best suits them.
+	\section{Archivist workstation}
+		\paragraph{}In order to implement the proposed workflow at the archivists' conveniences, we designed a workspace for archivists that incorporates several new components:
+		\begin{itemize}
+		\item A digital SLR camera, which captures photos as items are retrieved from the collection
+		\item QR-reading web-cameras, which decode the QR codes on the box and folder with the help of Zebra Crossing (ZXing), an open source QR encoding and decoding library written in Java, and a Matlab script to automatically associate images with their physical box and folder locations
+		\item A computer, to enable input of item metadata by archivists as they delve into the items
+		\item A sturdy backing fastened onto the archivist's desk to hold up the various components of the workstation
+		\item A USB button capable of triggering the DSLR camera
+		\item Fixed LED lights that provides consistent and high quality white lighting for the images
+		\item Purple felt as a backdrop on which images are captured and cropped
+		\item Folder and box stands, which hold the folder and boxes open easily for the archivist
+		\item A keyboard and mouse, with easy accessibility and wireless capability
+		\end{itemize}
+		
+		\paragraph{}The machine running our implementation of the Archivist Workstation will need to have a modern Windows Operating System, a recent Matlab version installed, a fast internet connection, and a minimum of five USB ports available. USB port hubs may be used for more connections if necessary. Our implementation has only been tested with Windows 7 and Matlab 2011b on a Lenovo desktop with 4GB of RAM, though any Windows operating system and Matlab version should work.
+		\paragraph{} Upon the first installation of the Archivist Workstation, the USB button must be configured to click the mouse upon pressing and the Canon camera must be configured to save images to the proper directory. In our implementation, we used a Griffin Technology USB button with software that enables us to configure press actions easily.  In our current implementation, the USB button should be configured to a ``right click" action and the mouse should be hovering over the Canon EOS remote capture software's round capture button.  In future implementations, the USB button could also be configured to run an executable. After testing and consideration, due to limitations in speed we are not using the executable approach for our implementation, though the files to do this are included in the software suite. Further, the Canon EOS remote capture software that comes with the camera must be configured to automatically save images it captures as M-fine quality JPEGs in ``Archivist Speedster/New." 
+		\paragraph{}An image of the physical layout of this archivist workstation is shown below.
+		
+	\begin{center}
+	\includegraphics[width=80mm]{1.jpg}
+	\end{center}
+	
+		\paragraph{}The goal of the archivist's workstation is to have all the tools an archivist needs to research, describe, and sort items centrally located at a desk that provides a smooth transition from unprocessed items to storage in permanent folders and boxes.  As part of our new workflow, digital images of items are taken and stored for use by our software.  Because of this, both archivists and researchers have the ability to refer to the digital item during future reference and processing.  The physical item will need to be stored and retrieved in the future, so when an image of an item is taken, this image is immediately associated with the item's physical location, namely the folder and box in which it is permanently stored.  After the digital image is taken, it is run through image processing that prepares it for use by our software.  To increase efficiency and simplify the processing of items, we have created a software suite that allows archivists to view the digital images of items alongside a series of metadata fields that automatically populate the dynamic finding aid.  Using this software suite, archivists can easily search through all items in a collection, edit multiple items simultaneously, and make connections between collections that were never before possible.
+		
+		
+		\subsection{Digital imaging of items}
+			\paragraph{}In order to efficiently image items, the archivist’s workstation has an 18-megapixel Canon EOS Rebel T3i DSLR camera mounted 42 inches above the surface of the desk so that archivists can take photos as they move items from their unprocessed state to permanent folders and boxes. The surface of desk is covered with felt that is a distinct color from that of the items so that an archivist can use the entire area in view of the camera to image items.  To take an image, the archivist can place an item anywhere in this area, without needing to center or align it, and then press the button on the desk – our software will take care of the rest.\\ \\
+			\begin{center}
+			\includegraphics[height=50mm]{2.jpg}
+			\includegraphics[height=50mm]{3.jpg}
+			\end{center}
+		\subsection{Recording an item's physical location}
+			\paragraph{}Because the physical item will need to be retrieved in the future, we use QR codes to track the folder and box in which an item is located.  A QR code is a two-dimensional barcode made of a pattern of squares that can be read by many different types of cameras, including webcams and cell phone cameras.  These QR codes are printed on labels attached to the outside of the folder and the side of the box to specify the item's physical location.  The Station also includes specially made stands to hold the folder and box open so that the archivist can easily place items in them while keeping the QR codes aligned with the webcams that scan them.  When an image is taken, the webcams read the QR codes and turn them into text, which is then associated with the item and used to locate it.
+			\begin{center}
+			\includegraphics[width=70mm]{4.jpg}
+			\includegraphics[width=70mm]{5.jpg}
+			\end{center}
+			Corresponding images are also attached, showing the different angles and features of our design.
+	\section{Image processing}
+		\paragraph{}When an image is taken by the archivist, two processes happen sequentially: QR code decoding and image processing.  The entire Archivist Workstation local software suite running on the desktop is all located in the directory ``Archivist Speedster."
+		\paragraph{}The QR code decoding step is comprised of capturing the images from the webcams and decoding the QR images into machine readable text. This step of the process is initiated by starting up the sendKeys.bat file, which begins an infinite loop that checks for images from the Canon camera in ``Archivist Speedster/New" every 500 milliseconds. Upon noticing a new image in ``/New", the images of the QR codes are captured by the two webcams using the CommandCam executable.\cite{13} These images of the QR codes are then decoded using the Zebra Crossing Library.\cite{14} Once the QR codes have been decoded, they are written to two text files containing the encoded information, one for the box QR code and one for the folder QR code. The text files are titled ``box[Image Name].txt" and ``folder[Image Name].txt" respectively, where [Image Name] indicates the name of the primary item image as saved by the Canon EOS software. The final step in this batch file process is to delete all unnecessary files (such as the raw BMP images from the webcams) and move the primary item image, box QR text file, and folder QR text file into the directory ``Archivist Speedster/Out."
+		\paragraph{} Below are images of example box and folder QR codes:\\ \\
+			\includegraphics[width=60mm]{5a.jpg}\ \ \ \ \ \
+			\includegraphics[width=60mm]{5b.jpg}\\ \\
+		\paragraph{}At the same time that sendKeys.bat is checking for images in ``Archivist Speedster/New," the image processing written in MatLab checks for images to appear in ``Archivist Speedster/Out" every 1000 milliseconds.  Our raw images that we receive from the Canon camera range from 2-4 MB.  The first step of the item image processing is the creation of a binary mask through thresholding.  We convert the image from a RGB format (where each pixel is encoded by the amount of red, green and blue intensity it has) to an HSV format (where pixels are encoded by their hue, saturation and value) for the mask creation because doing thresholding on the hue of an image provides the most accurate edge detection as it allows pixel comparison based on the hue instead of on the RGB triple.  Based on a threshold around the value of the hue for the background, we convert all of the pixels with the background's hue to 0 (black) and all of the other pixels to 1 (white). There may be pixels in the item that have the same hue as the background so we use MatLab's builtin fill function (imfill) to change the black pixels that are within the border the item to white. This is useful if the item we are imaging has some purple within it, as a photograph might have. In our code we used, a rgb2hsv\_fast function\cite{15} that was different from the builtin Matlab rgb2hsv function built into MatLab because it was faster and allowed us to only generate the hue instead of the hue, saturation, and value.\cite{16} This was important because we only need the hue in the mask creation and the conversion from rgb to hsv is a slow process in MatLab.
+		\paragraph{}Below are images depicting the creation of a mask from a raw image.
+			
+			\begin{center} 
+			\includegraphics[width=80mm]{5c.jpg}
+			\end{center}
+			\begin{center}
+			\includegraphics[width=80mm]{5d.jpg}
+			\end{center}
+			\paragraph{}After we create the mask, we crop down both the mask and item image to remove the excess boundaries so that the rest of the image processing works on smaller images, hence speeding up the processing time.  After this initial crop, we calculate the moment of the item image using the mask and from this moment are able to find the angle of rotation so that the item can be aligned properly.  The moment of the image can be seen below as represented by the red line on the image.\\
+			\begin{center}
+			\includegraphics[width=120mm]{5e.jpg}
+			\end{center}
+			 \paragraph{}Once rotated by this this angle, we re-crop the mask and the item image and then multiply the mask by the item image so that only an image of the item remains. The background of the item image is black after the mask multiplication, so in order to set the background white, we set all the black background pixels to 255 for the red, green, and blue values of the RGB color.  The final cropped and rotated item images are around 300 KB for a ``8.5x11" piece of paper.
+			\begin{center}
+			\includegraphics[height=71mm]{5f.jpg}
+			\includegraphics[height=71mm]{5g.jpg}
+			\end{center}
+			\paragraph{}After the image processing and QR decoding steps are done, the image of the item along with its folder and box IDs are posted to the server via a HTTP POST request. \cite{17}
+			\paragraph{}We can also see through a close up of the image below that the images are very readable, with the readability equal to that of the typical laser printer.  
+			\begin{center}
+			\includegraphics[width=70mm]{5g1.jpg}
+			\end{center}
+			\paragraph{}Although these images are not of preservation quality, they allow the users to read over the documents and get the written information of the item.  They also allow users to get a better understanding of the items that they are requesting before requests are made.  Further, these images are not meant to be replacements for the items themselves but rather tools for users to better understand the items they are requesting.
+	\section{Backend}
+		\subsection{Motivation}
+			\paragraph{}One impediment to the current processing of items is a poor database structure and poor backend interface. For one, archivists spend just as much time coding as they do cataloging items, since all data going into OASIS must be saved in a XML format, as part of a finding aid document, before entering the database. Outside of finding aids, data entry is limited as predefined fields in OASIS , and so archivists cannot submit all of the metadata they would like. Once the items are processed, searching OASIS is slow and buggy, and often returns many irrelevant results or none at all about what you were looking for. Lastly, the finding aids that are generated during the cataloging process are like Word documents: they're static.  Something as simple as finding a single item from a pile of finding aids is not an easy task without time-saving features such as sort and search by item. Going back to a finding aid to fix something is even more difficult since updates do not happen automatically. 
+			\paragraph{}Furthermore, there is a growing need for an all-in-one system that can serve finding aids, item locations, and digital images all in one place. Currently, HOLLIS and OASIS systems do not integrate well into each other, nor do they integrate well into the Digital Repository Service (DRS) which currently stores digital images and other data for the Harvard Library special collections. Right now, an OASIS search for a special collections item yields a finding aid with a specific HOLLIS call number which must be copied on the clipboard and paste into the HOLLIS search bar to find the item. The HOLLIS request then redirects to VIA, which is the frontend interface for digital images in the DRS. Information in VIA must be hand-copied from emails sent to archivists when digital items are created in the DRS; there is as of the time of writing no other way images in VIA can be added automatically from uploads to DRS.  
+		\subsection{Overview}
+			\paragraph{}Our proposed setup helps both simplify and speed up current item processing. In the first step, the archivist acquires an image of the item. This image is then uploaded to a central web server available only to archivists, where a digital version of the item is created. Next, the archivist adds relevant metadata to the digital item in the editing stage, which is then stored on the web server. Once the item is marked by an archivist as public, a dynamic finding aid for the item along with other items in the collection is generated and the item's information can be added to Library search engines.
+			
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=70mm]{5h.jpg}
+\caption{Proposed Processing Integration with Backend}
+\label{default}
+\end{center}
+\end{figure}
+
+		\paragraph{}Our solution helps speed up item processing of special collections through an all-digital system that `learns' the collection as the archivist begins processing it. First, autocomplete saves time and keystrokes by remembering author names, descriptions, and commonly used tags when new items are added to a collection. Second, facets on a collection, such as author names and titles, are generated automatically as new properties are added in processing, and the archivist can then use these to search a collection. If the item is typewritten, our system attempts to scan and extract the text from the image using O.C.R., which is then stored and searchable by archivists and researchers. The entire collection can then be sorted and re-sorted on the fly by the archivists, regardless of the order in which it was catalogued. Furthermore, as items in a collection are updated or new items are added and made public, the changes are reflected immediately.
+		\paragraph{}Our solution can also generate a static finding aid from the dynamic finding aid in XML format. We are currently looking into making sure that our system is EAD compliant; EAD is a standard data storage format used by many different library archival database schema. Furthermore, every update made to the collection is reflected in the static finding aid the next time it is retrieved.
+		
+		\subsection{Technical Details}
+			\paragraph{}Our central Web Server both hosts the backend (database, image storage, models, controllers, etc.) and the frontend (views, HTML, CSS) for the archivist workstation. For the project, we used an Amazon EC2 small instance (4 GB RAM, 2 CPU cores, 8 GB Virtual Disk, Ubuntu 10.04) along with Amazon S3 reduced-redundancy storage to hold images. The backend was coded in the Ruby programming language framework Ruby on Rails, using Phusion Passenger and Nginx to handle interactions between the web and the Rails code. The database that Rails interacts with is a MySQL server located on the same machine. Ruby on Rails was chosen as a preferred backend since it allows for rapid generation of RESTful APIs (REST refers to a best-practices web programming standard), an efficient backend, and scaling to suit millions of users.
+			\paragraph{}All code is freely available on Github in the ES96Library/workbench repo (git@github.com: ES96Library/workbench.git).  
+		\subsection{Backend Implementation}
+			\paragraph{}The backend database structure for the prototype was developed with certain requirements in mind. First, it needs to be able to store both items and images of the items generated by the Archivist Workstation. Second, it needs to be able to store arbitrary types of text and numeric metadata about a certain items that are added during processing. Because of the nature of processing, the types of metadata that would be added (i.e. Author Name, Title, Description, etc.) can not be predicted; therefore, pre-defined fields for types of property data were avoided. Third, it needs to be able to efficiently facet on different metadata property types, e.g. to generate a search result from a search query. Fourth, it needs to be able to store data about QR codes corresponding to physical boxes and folders scanned. 
+			\paragraph{}From these requirements, we chose to use three SQL tables to store our data: items, properties, and values. Items store an item's id in the database, the path to the item's image in storage, and additional paths to thumbnails of the image. Properties refer to a conserved set of types of metadata (i.e. author name, title, etc.), along with a property id. Values contain the actual metadata along with a value id, associated with items and properties through a foreign key; that is, the values table contains the item id and property id on each row that associates the metadata with each). A <key:value> pair herein refers to a property / value pair that is associated with a particular item. By only storing items and their key:value pairs, we no longer need to hold onto a finding aid while still being able to store more information in the database by eliminating pre-defined fields.
+			
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=70mm]{5i.jpg}
+\caption{Prototype Backend Structure}
+\label{default}
+\end{center}
+\end{figure}\ 
+			\paragraph{}All rows of all tables in the database also get two timestamps associated with when each row was created and when it was last updated. This timestamp data is then used by Ruby on Rails to generate a cache file of each SQL table as static files on disk that can be served to the frontend without having to perform additional SQL queries when, for instance, the data in SQL has not been modified since the last time the query was performed. This allows the backend to serve large data and complex search queries efficiently and scale to thousands of users. 
+			\paragraph{}For the purposes of the prototype, certain features were not added in the interest of time. For one, a table of collections could be maintained that would list all items in a collection and all collections currently processed, along with collection-level metadata. Another table could store user data, used for authentication and permissions; e.g. which users are allowed to have archivist access for editing, updating, and seeing privately marked items and which users are only allowed to have researcher access to read from the database. Furthermore, another table could be used for version control of items in the database, so if a mistake is made during processing it can easily be reversed, and archivists can see which items they have edited and which others have processed or contributed to. 
+			\paragraph{}All interactions with the backend are made through an Application Programming Interface, or API, based in JavaScript Object Notation, or JSON. Typically, when a request to the backend is made through the API, Ruby on Rails will processes the request, either make calls to the SQL database or the on-disk cache, and fulfill the request in JSON format. All requests to the backend are validated and checked for correctness before processing, and all input is escaped so as to prevent SQL injection attacks and other miscellaneous server-side attacks by default. When bad requests are made, Ruby on Rails catches the error and responds with an appropriate HTTP header response. 
+			\paragraph{}API calls for the backend are provided in Appendix \textbf{D}. This provides definitions for CRUD (create, read, update, delete) actions on items, listing items, and other essential features. For listing items in the database, a pagination scheme was employed so as to limit the amount of data sent on any particular search to improve efficiency and page load times. 
+			\paragraph{}Sorting was implemented on items in the backend to suit both simple and advanced sort. Simple sort can be performed just from the items table by listing items either by ascending or descending item id. For anything else, such as sorting by a certain property key, a more complicated methodology was employed. First, all items that have the metadata field associated with the key by which the user wishes to sort on are selected from the table of all items. Next, a list of all values associated with both the sort key and the isolated items is generated. Then, these values are sorted either ascending or descending as specified by the sort. Finally, the items corresponding to the sorted values are then sorted so that the position of each item in the list matches the position of its sorted value in the list.
+			\paragraph{}Search was implemented to handle search by keyword and search by $<$key:value$>$ pair, both with leveraged SQLs built-in search functions to deliver results. For keyword search, all entries from the values table that contain the keyword are found. From this, a unique list of items to which these values correspond to is generated by SQL, which is then delivered to Rails. Key-value pair search, however, employs a different technique. First, a join table is created in system memory that includes both values and properties tables. Next, entries from the join table are selected that match both the key name and value name included in the paired search. Then, unique items corresponding to the selected values from the join table are looked up. For multiple search terms, multiple search queries are executed in series. The result of each subsequent search is then intersected with the list of unique items from previous search queries so that the items returned is filtered further with each query. 
+			\paragraph{}Features like autocompletion and search faceting were implemented by providing additional JSON calls beyond simply listing items in the database. These features were implemented by generating a list of all potential $<$key:value$>$ pairs from all of the items in the database, grouped by key. These are then sent as JSON to the frontend that can then use it to generate search facets and populate a autocomplete dictionary for both potential properties or values to add. This list of $<$key:value$>$ pairs could also be filtered using a search query, so that only those $<$key:value$>$ pairs associated with the items returned by a search would be returned. 
+			\paragraph{}A unique caching scheme was developed for the project as well that could handle both search queries, sorting, and pagination of items. For instance, adding new items to the end of the items table does not affect other cached pages not corresponding to the end of the database. Usually, adding new items to the end of the database would cause the entire cache of all items by page to become invalid, since certain features like the number of pages of items and total items in the database saved with each page. We got around this by sending data that is likely to change in the browser cookie, which is updated on every request, thereby preserving the cached pages which take up the most processing time on the server. This technique as so far never been implemented, to the group's knowledge, in Ruby on Rails or any other web-oriented framework previously. 
+			\paragraph{}OCR is currently in development on the backend at the time of writing. Successful tests on a local machine showed promise for incorporation into the Rails backend. To handle OCR inside Ruby on Rails, a Ruby gem (i.e. an add-on for Rails) called tesseract-ocr is used. Initial tests showed 98.5\% accuracy when using this tool for OCR. OCR jobs can be run in the background after an image has uploaded on the web server. This OCR tool can only work, however, on typeset or typewritten material. 
+			\paragraph{}A quick-start guide for installing the backend on a new server is provided in Appendix \textbf{C}. The full rails code is attached to this report as a ZIP compressed archive as well as available on Github as previously mentioned. 
+		\subsection{Current limitations of the Backend Prototype}
+			\paragraph{}Our current prototype does not yet provide the necessary permissions and authentication protocol to differentiate between archivists and users and their roles. This will need to be implemented first before other extensions to the backend. 
+		\subsection{Extensions on the Backend}
+			\paragraph{}Currently, official support for all functions of the backend is provided for JSON interactions with the backend. However, due to the extensibility of Ruby on Rails, the backend can also interact with other web servers and users through a different file format called XML (eXtensible Markup Language) format. XML interactions are very similar to JSON as it provides another way to store and send large amounts of data in compatible formats around the web. Currently, the Harvard Library uses a specification based on XML called EAD (Encoded Archival Description) to store data in many different searchable databases accessible to the entire Harvard community including but not limited to HOLLIS, OASIS, and VIA. XML data can be considered EAD-compatible so long as they have certain specific fields as defined on the by the EAD Document Type Definition (DTD), which is maintained in the \underline{Network Development and MARC Standards Office} of the Library of Congress (LC) in partnership with the \underline{Society of American Archivists}.
+			\paragraph{}Since Ruby on Rails can generate XML, a feature of the backend could be developed to allow for the generation of EAD-compatible files from $<$key:value$>$ pairs associated with items, so long as the appropriate pairs defined in the EAD definition appear along with each item in the database. This could be used, then, to generate a static finding aid from the dynamic finding aid. Furthermore, Ruby on Rails can push this static finding aid directly to HOLLIS, OASIS, or VIA servers when appropriate, without interaction of the user. Also, this static finding aid could be updated automatically when items in the database change and Ruby on Rails determines that a new static finding aid should be generated.
+			\paragraph{}Furthermore, a static finding aid can be generated in a human-readable rich text format (RTF) that would include all relevant metadata of each item in a collection, presented in the text in order of a certain set of facets chosen by the user or a set of predefined standard facets that all items in a collection should be organized by. 
+			\paragraph{}Another extension of our prototype would be to use QR codes on each folder and box that point not only to an item's location in the library but that also point to a hyperlink of all items in that folder and box in the Ruby on Rails backend. This could be used, for instance, to create a mobile website that shows relevant metadata and item images associated with the box or folder, so that a user could learn more about the items in the box or folder before looking at the physical items themselves. Another use for this could be that users wishing to add images of items corresponding to a certain folder and box could do so from their mobile phone without having to install special software on their mobile device to do so; all they would need is a fast Internet connection.  
+			\paragraph{}Access to items in the database is currently restricted to going through a specific search interface developed at Harvard, such as HOLLIS or OASIS. It would be beneficial to allow publicly-accessible items to be indexed by search engines such as Google to allow for better ease-of-access and public awareness of items in the collection. This could potentially increase viewership of the collections by a order of magnitude, and bring considerable benefits to the Harvard Library in the public eye. 
+			\paragraph{}Finally, at this moment only image uploads are supported, either from the Archivist Workstation or another device enabled for image uploads to our database. Another extension on the project would be to support more document types, such as Word files, RTF, PDF, movie files, and different audio formats. These files would be automatically searchable either by full text for document formats or auto-transcribing of speech from movie and audio files. 
+
+	\section{Front end, dynamic finding aid, software}
+		\subsection{Interface Requirements and Overview}
+			\paragraph{}Given the database of images previously described, archivists must be able to add metadata to the images and then make them accessible to researchers. Specifically, the interface must allow archivists to easily find items within the collection, view existing metadata for those items, and edit or add to the metadata for those items. An interface for researchers must allow them to easily find items within the collection and view the metadata for those items. Since there is significant overlap between the needs of these two sets of users, we designed one interface to cater to both archivists and researchers. We call this a dynamic finding aid.\\ \\
+		\includegraphics[width=150mm]{6.jpg}\\
+		
+		\subsection{Implementation Details}
+			\paragraph{}In our prototype, the user interface was implemented in JavaScript and communicated with the backend via JSON. Twitter's Bootstrap framework and the Colorbox plugin were used for styling and common user-interface elements.
+		\subsection{Finding Items}
+			\paragraph{}When a user opens the finding aid, they are presented with a paginated grid of image thumbnails. Each of these corresponds to an item and is labeled with the title and author of the item. 
+			\paragraph{}Our dynamic finding aid incorporates three features - searching, filtering, and sorting - in order to let users find the items they are looking for as quickly as possible. The first of features is a search bar. When users enter one or more words into the search bar and press enter, the thumbnail grid is updated to only show items that contain those words in any of their metadata values. 
+			\paragraph{}The second feature is filtering (faceted search). In a column below the search bar is a list of common values for each metadata key among the items on all pages of the current search result. Clicking on one of these filters the search result to include only items with that value for that key. For instance, if Theodore Roosevelt were the author of several items in the current search result, his name would show up under author in the list of filters, and clicking on it would filter the current search result to only show items he authored. The currently active filters are highlighted at the top of the filter list, and there is an `x' displayed next to each of them which removes the filter when clicked, expanding the search result. When multiple filters are active, all the results displayed will match all the filters.
+			\paragraph{}The third feature is sorting. Along the top of the page is a dropdown menu of all the metadata keys for each key. By selecting a key from this menu, the user can sort the current search result by any of these keys in ascending or descending order. This allows the user to view the search result in whatever order is most useful to them, and allows the dynamic finding aid to always make available the original order of the items as they were received by the library.
+		\subsection{Viewing Items}
+			\paragraph{}When a user clicks on a thumbnail, they will be presented with a modal window containing a preview image sized to take up most of the screen and a table of all the metadata keys and values associated with the item. Clicking on the preview image will open the fullsize image. For many use cases, the dynamic finding aid should provide the user with all the information they need about an item, and physical access should be unnecessary.\\ \\
+		\includegraphics[width=150mm]{7.jpg}\\
+		\subsection{Editing Item Metadata}
+			\paragraph{}When an archivist views the modal window just mentioned, the metadata values will appear inside editable text fields. The archivist can add new keys and change values of existing keys.
+			\paragraph{}One of the goals of the dynamic finding aid is to help archivists work as fast and as accurately as possible while adding and editing metadata. To this end, whenever an archivist is typing into a metadata text field, the interface will attempt to autocomplete what the archivist is typing using previously entered text. For example, if Theodore Roosevelt has been added as an author for one item, when an archivist types the letter `t' into an author field on another item, ``Theodore Roosevelt" will be included in a list of suggestions below the field. The archivist can use the enter or return key to choose one of these suggestions. This feature should save keystrokes and eliminate the possibility of typographical errors after a metadata value has been added once.
+			\paragraph{}Another feature designed to improve archivist speed and accuracy is the ability to edit multiple items at once. When an archivist is viewing the grid of thumbnails in the dynamic finding aid, they will see a button labeled ``edit multiple." Clicking on this button will instruct them to select items to edit. When the archivist clicks on thumbnails, they will be highlighted and added to the set of selected items, unless they are already selected, in which case they will be un-highlighted and removed from the set. When the archivist is done selecting items, they can click ``edit selected items," which will display a modal dialogue allowing them to add a metadata key-value pair to every item while preserving or deleting the existing values for that key. This feature should reduce repetitive actions on the part of archivists while using this interface.
+			
+	\section{Analysis of effectiveness of solution}
+		\paragraph{}To develop a rough estimate of the speed and effectiveness of the archivist workstation, we ran a few short tests on both the imaging and the metadata portions of the processing workflow.
+		
+		\subsection{Imaging Alone}
+			\paragraph{}For the imaging test, 200 items were acquired in 11.6 minutes. This was performed at a reasonable pace, not an all-out rush. These numbers should be understood to be roughly what a person would actually achieve, at least for moderate amounts of time. In order to compare to the current workflow, we need to convert pages per minute into linear feet of archived materials per year. To make this conversion, we assumed that the archivist or whoever is scanning the documents would spend at most 75\% of their time working at this reasonable pace. This is meant to incorporate rest, breaks, and decreases in efficiency which inevitably result from too much time spent on a single repetitive task. 75\% of an 8 hour day is 6 hours of work per day.
+{\footnotesize$$\left(\frac{200}{11.6}\tf{page}{minute}\right)\times\left(60\tf{minutes}{hour}\right)\times\left(6\tf{hours}{day}\right)=\fb{1500\tf{pages}{day}}$$}
+			\paragraph{}We then assume that the archivist works 48 weeks out of the year, starting from a base of 52 and subtracting 4 weeks for vacation, sick leave, time spent at meetings and in training, and on other odds and ends which invariably disrupt any employee from their primary occupation at work.
+{\footnotesize$$\left(\frac{200}{11.6}\tf{page}{minute}\right)\times\left(60\tf{minutes}{hour}\right)\times\left(6\tf{hours}{day}\right)\times\left(5\tf{days}{week}\right)\times\left(48\tf{weeks}{year}\right)=\fb{1,489,655\tf{pages}{year}}$$}
+			\paragraph{}Finally we know from an interview with Suzanne Denison on March 1st that as a rule of thumb 1 linear foot corresponds to 2000 pages of material. Therefore to obtain the linear feet per year we divide by 2000 pages per linear foot.
+{\footnotesize$$\left(\frac{200}{11.6}\tf{page}{minute}\right)\times\left(60\tf{minutes}{hour}\right)\times\left(6\tf{hours}{day}\right)\times\left(5\tf{days}{week}\right)\times\left(48\tf{weeks}{year}\right)\times\left(\frac{1}{2000}\tf{linear feet}{page}\right)=\fb{744.8\tf{linear feet}{year}}$$	}
+			\paragraph{}The total rate of imaging for our new workflow is 744.8 linear feet per year.
+		\subsection{Metadata Entry Alone}
+			\paragraph{}For the metadata entry test, 100 items were processed in 26 minutes. This included adding more metadata to each item than is done in the present archival process, most notably adding a subject to every item including photographs. Using the same conversion assumptions as in the imaging section, we can draw this out to linear feet per year as follows.
+{\footnotesize$$\left(\frac{100}{26}\tf{page}{minute}\right)\times\left(60\tf{minutes}{hour}\right)\times\left(6\tf{hours}{day}\right)\times\left(5\tf{days}{week}\right)\times\left(48\tf{weeks}{year}\right)\times\left(\frac{1}{2000}\tf{linear feet}{page}\right)=\fb{166.1\tf{linear feet}{year}}$$}
+		\paragraph{}If the same level of information is added in the new process as is added in the current process, the rate drops to 200 pages in 23 minutes.
+{\footnotesize$$\left(\frac{100}{23}\tf{page}{minute}\right)\times\left(60\tf{minutes}{hour}\right)\times\left(6\tf{hours}{day}\right)\times\left(5\tf{days}{week}\right)\times\left(48\tf{weeks}{year}\right)\times\left(\frac{1}{2000}\tf{linear feet}{page}\right)=\fb{187.8\tf{linear feet}{year}}$$}
+		\paragraph{}These numbers are probably an underestimate. The true power of autocomplete and the group editing feature don't manifest on the order of 100 items, but rather on the 1000-10,000 or more item order. Furthermore, these tests were performed by a subject not yet intimately familiar and comfortable with the the system, as an archivist would be after a week or two of use. Because these numbers happen on a scale that does not capture the full power of the system and are performed by a user before the learning curve has flattened out, there are good reasons to believe that the metadata entry number in particular will increase, perhaps substantially.
+			
+		\subsection{Combined Imaging and Metadata}
+		Combining the items for both imaging and metadata entry linearly, we get:
+		$$2(23)+11.6=57.6\tf{minutes}{two hundred items}$$
+		$$\frac{200}{2(23)+11.6}=\frac{200}{57.6}=\fb{3.47\tf{items}{minute}}$$
+		This can be converted to linear feet per year to obtain an overall estimate of the new workflow's speed in the same way as above.
+{\footnotesize$$\left(\frac{200}{57.7}\tf{page}{minute}\right)\times\left(60\tf{minutes}{hour}\right)\times\left(6\tf{hours}{day}\right)\times\left(5\tf{days}{week}\right)\times\left(48\tf	{weeks}{year}\right)\times\left(\frac{1}{2000}\tf{linear feet}{page}\right)=\fb{150\tf{linear feet}{year}}$$}
+		For our total workflow, the average archivist will process 150 linear feet of material per year. 
+		\subsection{Separability}
+		\paragraph{}These two processes, imaging and metadata, go at different speeds. The relative speed of the two processes is given below.
+		$$\frac{744.8\tf{linear feet}{year}}{187.8\tf{linear feet}{year}}\tf{imaging}{metadata}=3.97\approx4:1$$
+		Imagining is 4 times faster than adding metadata, therefore about 80\% of time is spent on metadata and 20\% on imaging.
+		\paragraph{} However, a greater efficiency could also be realized by splitting the scanning and metadata efficiency between two people. Although powerful, the combined imaging and metadata entry number does not capture the full power of the archivist workstation. Because the workstation can double as a metadata entry station both of these steps could be performed by a single archivist if so desired. Under this workflow time would be divided between the two tasks. By having a less-skilled employee or student worker scan documents, the highly trained archivist could focus on metadata entry and the whole system could run at the pace of the metadata entry, or about 190 linear feet per archivist per year (more if the hypothesized gains in speed and efficiency after a learning curve and with larger numbers of items manifest).
+		\paragraph{}This workflow is suited perfectly for a student worker as well, because the scanning can be done at any time, independently of the archivist. If the student needs to work flexible hours, or increase or decrease workload from week to week in response to demands of school work or other commitments, then no delay is realized as long as the student scanning keeps ahead of the archivist adding metadata.
+		\subsection{Current Archival Process}
+		\paragraph{}In an interview on February 16th, Marilyn Dunn stated that she set a new standard of 80-100 linear feet per archivist per year during her attempts to eliminate the Schlesinger backlog. Before this requirement (which by extension required either greater speed or the entry of less detailed information from archivists) the average archival rate was noticeably less, in the 50-80 linear feet per year range.
+		\paragraph{}While we do not have an exact metric for the current processing rate of Houghton library, it is reasonable to assume the two libraries process at a similar pace. Therefore, to start at the top of the current range, we assume that the present archival system processes 100 linear feet per archivist, per year. Even taking the upper end of the current workflow processing rate range, and taking the lower, more conservative estimates of the new workflow pace, we realize a 50\% improvement by adopting the archivist workstation system.
+		\paragraph{}In addition to this dramatic increase in pace, the archivist workstation and accompanying dynamic finding aid software suite deliver a more powerful means of search and discovery to researchers, archivists, and the lay public, while simultaneously opening the doors to new users across the world to benefit from Harvard's special collections libraries.
+		
+		\subsection{Cost}
+		\paragraph{}The cost of our current prototype entirely consisted of that of the materials; given that the creation of this prototype took place in the context of a class, there were no labor costs. There follows an inventory of individual parts and costs.\\ \\
+		\includegraphics[width=160mm]{es96chart.pdf}
+		
+		\pagebreak
+		
+		\includegraphics[width=160mm]{es96chart2.pdf}\\ \\
+		
+		\paragraph{}The computer integrated with the workstation was provided free of charge, so an additional \$400-500 could be added for this cost. The purchase of a new computer for each workstation might not be necessary as archivists presently use computers to do their work, and an existing computer could easily be integrated with the workstation to produce the desired outcome.
+		\paragraph{}The physical structure of the frame in the archivist's workstation was made mostly from PVC pipe and we realize that a production-quality workstation would not be built from this material and connectors. The relatively high cost of the metal speedrail connectors (\$325.94) could be devoted to covering the cost of whatever material were used in the final version.
+		\paragraph{}As this workstation was a first-edition prototype, and a great deal of the materials used to build it would not be desirable in a final product, these costs should be expected to decrease in future iterations. Due to the relatively limited number of workstations required for at least Harvard Libraries' purposes (a few dozen, at most), little savings in manufacturing are anticipated from economies of scale. Were a similar demand generated at other special collections libraries worldwide the cost per unit could be driven down but at least for the time being, the workstation would be manufactured and assembled in small numbers.
+		\paragraph{}Even given the possibilities of increases in price, the range of \$1500 per workstation is encouraging considering the increases realized in processing efficiency and in the effectiveness of the data produced. \$1500 is certainly not a prohibitive cost and falls well within a range that warrants further consideration without immediate worry over initial or final cost.
+		\paragraph{}The cost of storing data, should the prototype be adopted, would also not be prohibitive. Our system compresses images of items to about 200 KB per 8 and a half by 11 page. For the entire backlog at its current estimate of 5 miles of shelf space, this would mean we would be digitizing 52.8 million items. Using a robust industry standard cloud storage solution, for example Amazon S3, that includes redundancy to protect against data loss and ensures constant uptime, this would cost only \$14,000 per year to store the entire backlog. As data storage prices continue to plummet, this rough cost estimate is the most the Harvard Library would pay to store these data.
+		
+		
+	\section{Limitations}
+	\paragraph{}Our new process comes with limitations, as anything new process does. There are both limitations of our solution as a concept and of our implementation of the solution. One limitation of our solution as a concept is that items over the size of the imaging area cannot be photographed and added using our archivist workstation. 10\% of collections have oversized items, though, so this is not a negligible value. This 10\% may include production plans, set designs, maps, or other items. One workaround for this issue would be to take an image of part of the item and make a note of that in an additional field. Even without this workaround, though, placeholders can exist for the item on the main screen, such as a photograph taken through the Digitization Lab or simply ``No image available" text. A second limitation of the solution is that items are not physically arranged. For larger collections, this may cause problems if a user wants multiple items that are all in separate boxes. This increased difficulty of access may end up costing the library more, but the reduced cost of processing the items will offset the increased cost significantly. Also, there is reason to believe that many items that are being requested are not items the researcher necessarily wants, which will be known right away by the fact we have images available for every item. This will offset the the difficulties of not physically arranging items. There may also be the issue of increased usage by people who right now don't use the system. These people may want to visit if they see items that particularly interest them. We don't believe, however, that this increased scope of the special collections is a concern that should cause pause, but rather a problem that we can only hope to have in the future.
+	\paragraph{}Some problems also exist with our implementation of the solution. First, our image cropping is not robust. If there is a bit of the archivist's hand in the picture, for example, this will be not be cropped out. The hand will then cause an inaccurate moment, and so the rotation may be off as well. This very same feature, however, allows an archivist to put two separate images in the same picture. This problem could be addressed in the image processing software. Another limitation of our software is the uploading time. Currently it takes 8 seconds for most images to be processed then loaded to the database. This time could be reduced using more refined code. A third limitation is the ability to select many items in a row. Currently, the user needs to select every item. It could be possible, however, to allow users to select one item, then hold down a button such as shift, and click a later item in or to select every item in between as well. Overall, however, we believe that the benefits provided by the Archivist's Workstation far outweigh the limitations involved.
+	
+\chapter{Recommendations}
+		\paragraph{}After our work with the Harvard special collections, we have a few recommendations for the future. We believe that our system will be easily adopted and useful, for reasons that we have discussed above. However, it must be said that our system is a prototype - it is not the final solution. A system perfectly fitted to fix a problem takes more than a semester to build, and takes more expertise than twelve undergraduates can give. Below are some further recommendations that we have for the special collections.
+	\section{Data collection}
+		\paragraph{}Our first recommendation is to expand the collection of anonymous data. Through our new system, information on users would be more easily accessible. However, even if the Archivist's Workstation (or something like it) is not adopted, it is still important to fully understand the users.
+		\paragraph{}For example, some questions that data can help answer are: When a collection is digitized, how many times is it still visited in person compared to when it wasn't? Or How many people come onto Hollis and OASIS to browse, and how many are looking for only one item?
+		\paragraph{}With more data, and by asking questions like these, the libraries can get a deeper understanding of how people use the Special Collections. To that end, we would recommend collecting more anonymous data on users of the online system. At the moment, assumptions are made about how users utilize Harvard Special Collections - the libraries must be sure that their assumptions about usage are correct.
+	\section{Storage of digital items}
+		\paragraph{}Libraries such as Schlesinger are receiving increasing number of digital objects. Coming in on hard drives or from websites, in formats ranging from PDFs to JPEGs, these files are as important as the paper files currently coming into the collections. However, they are not handled to their fullest potential. Removing duplicates and system files from these collections should not be problematic - a program can automate this process. Web crawls, like the crawls that Schlesinger does of prominent women's blogs, should take into account pictures and videos and animated files. These two changes to how the libraries store digital objects will increase the ease of processing and worth of these collections.
+	\section{Archivist community}
+		\paragraph{}We have realized, throughout our research, that archivists gain a lot by talking amongst themselves. Each archivist has a different strength, and by asking other archivists questions an archivist can greatly enhance the quality of their work. However, at the moment, the process involves the archivist getting up and finding the person, or calling them and getting them to take a look at the physical object. It would be useful to put a procedure into place where an archivist can alert another archivist to a record, and ask for a consultation, all over the computer, using the digital image of the object.
+	\section{Crowdsourcing} 
+		\paragraph{}In recent years, the idea of utilizing users to create and moderate content has been gaining ground. The Special Collections at Harvard are very popular, and many people look at the records kept online. There are two different things we would recommend at least partially crowdsourcing: metadata, and images.
+		\paragraph{}To crowdsource metadata, the Special Collections can set up a system where a user can submit tags or further notes to the record of an item. Of course, it would be important to curate such input from the user, and to distinguish between user-generated content and archivist-generated content. Still, crowdsourcing is a very good way of helping the user find what he or she wants, of displaying relationships between items, and of adding extra content to the record. When we discussed this sort of tagging system with Houghton and Schlesinger staff, they mentioned that several projects were underway in similar institutions, so we chose not to focus upon it.  By opening up the creation of metadata, the special collections can display many different links between items and more information on the items themselves, created by the people who use the system.
+		\paragraph{}Another way of crowdsourcing is to crowdsource the creation of images – specifically, to utilize researcher-generated images. We understand that our new process cannot, for reasons of time and money, be applied on the collections that have come before it. Collections that have not be been digitized up to this point will most likely stay un-digitized unless put through the current digitization process. However, currently, researchers come to Houghton and Schlesinger library and do their own digitization. With the decreasing cost of storage and cameras and the increasing quality, it has become worthwhile for researchers to take pictures of the documents they utilize, for future reference. Harvard Special Collections should consider taking these photos, as part of the agreement signed by the researcher, and using them themselves. These images are already being taken, and the effort is nil on the part of the library staff - it is wasteful to let these photographs slip through the libraries' grasp.
+		
+	\section{Frequently consult engineers and computer scientists}
+		\paragraph{}Increasingly, technology is able to do things we could not have dreamed of. Because knowing what technology can accomplish is difficult, we would suggest putting the staff of Houghton and Schlesinger into closer contact with the technically savvy, such as engineers and computer scientists. Doing what we did, and sitting down in a room together and discussing problems and technological solutions, is extremely valuable. For example, one large problem of the current system we learned of during our research was the emails sent to the archivists from Imaging Services. With row upon row of messy CSV data, archivists are forced to copy and paste hundreds or thousands of entries into their own spreadsheets in order to create a link between the digital object and the physical object in the record. Had there been a computer scientist or engineer around earlier, this problem could have been solved earlier. Hiring a computer scientist or engineer as staff or on retainer would be an effective way to support the archival staff.
+	\section{Full implementation of optical character recognition}
+		\paragraph{}We would recommend that the special collections implement optical character recognition for image files. Optical character recognition, or OCR, refers to the automated translation of printed text into machine-encoded, searchable text. Our digitization system currently implements a rudimentary version of OCR wherein a search on our database will yield documents containing instances of a specific term as results. The problem with this scheme is that it does not show users where in the text these terms are, thus limiting its usefulness. Full implementation of OCR would allow users to find the exact location of a piece of data. The time saved in searching for these data points manually could then be better invested in more intellectual pursuits dedicated to their research. 
+		\paragraph{}Another big advantage of OCR is the ability to exploit text mining, or the identification of patterns by the automated extraction of data of a textual nature. These patterns could very well lead to new information and would thus enrich users' research. The accuracy of OCR is not 100\%. When we ran our own version of OCR on items from the Ida Pruitt collection provided by the Schlesinger Library, we obtained a word error rate of 1.5\%. While this might seem high, we have to remember that we are not recommending that these OCR files replace the digital images; rather, we are proposing it as an additional tool to enhance the research capabilities of users. 
+	\section{Adoption of speech recognition software}
+		\paragraph{}Speech recognition software can do a wide variety of things, but where we really see an opportunity to improve the archival workflow is in its ability to translate spoken words into written text. As an addition to our Archivist's Workstation, this capability could allow archivists to input metadata about digital images as they are being generated without using their hands, which would result in a significant gain in efficiency. The technology is not 100\% accurate, but there are some ways in which the accuracy of this system can be improved. First of all, the use of a small vocabulary, that is, a small subset of words from which to populate the metadata fields decreases the number among which the system must discern, increases its accuracy. Speech recognition software can also be trained to account for differences in pitch and pronunciation so as to allow it to better recognize the words of individual archivists. Noise would be another problem, as archivists would have to speak constantly.  However, the archivist could where a headset, which would allow archivist to speak in softer voices and placing the workstations in rooms specifically for them. 
+	\section{Copyright}
+		\paragraph{}The intricate legalities behind being able (or not being able) to post pictures online for scholarly use are, unfortunately, beyond us as undergraduates. We understand that there are complications for making everything available for the Harvard community. However, we also know that it is simple to take an image and put protections on the image, so that it cannot be shown until a certain year, and, despite copyright finagling, it is still important to digitize with impunity. 
+		\paragraph{}At the time of writing this report, federal law does allow a single digital copy of a physical item to be made by an archivist at a library for the purposes of access and preservation, including those of copyrighted works and recently created works. This law came into effect recently, and is under 17 U.S.C. § 108. A legal professional should look into this statute and decide whether or not the law applies to this use case. A copy of the statute can be found here: \url{http://codes.lp.findlaw.com/uscode/17/1/108}. 
+	\section{Ergonomics}
+		\paragraph{}There were some physical issues we could not address. One issue involves an archivist's trip from their storage facility to the reading room. There are three primary issues: the distance, ease of transport, and change of climate. The archivist travels a long way with merely a cart to aid in the transportation of items from the storage area to the reading room. Next, the cart is hard to push. This may seem like a trivial issue, but it does still need to be addressed, as the pathway between the two places is not a smooth surface over its entirety. This could be addressed by using a cart with larger wheels. Thirdly, the cart with materials is exposed to various climates as it progresses through the various buildings to finally reach the reading room. After all the efforts that go into preserving a material's condition, these materials are rapidly exposed to different temperatures and different humidities, a terrible combination for the long-term preservation of these materials.
+		\paragraph{}In the storage area itself, especially in Schlesinger, there are problems in lifting the boxes, quite heavy boxes sometimes, from high places off the shelves. A pulley system could be attached to the ladder, preventing the archivist from having to walk down a ladder with boxes of material under her arm. The ladder itself is another issue. It is heavy and hard to move around the room. In order to to make this more efficient, a leverage arm may possibly be used as an attachment to the front of the ladder with its own wheel. This would allow the user to push down, which is easier than pulling up, and apply less force if the lever was long enough. If an engineer were kept on retainer, these issues could be addressed by this engineer.
+
+\chapter{Final Thoughts}
+	\paragraph{}Through our work in these archival processes, we've uncovered several different shifts in mentality that accompany the new workflow. These shifts in mentality coincide with a change in the modern approach to processing, since they reflect an increasing reliance on technology as a means of automating many repetitive, manual processes.
+	\paragraph{}First, one of the key facets of the current mentality involves the necessity of sorting everything. The primary purpose of the present physical organization is to enable archivists to more easily find objects by putting them in a known order, but a secondary important feature of the physical sorting is the physical geographic proximity of similar items that allows users to serendipitously trip over new related items. This current mentality also coincides with the idea that each process needs to be done once and perfectly; if the sort is not perfect, the item will not be found or used. A third aspect of the current mentality stems from the reticence of archivists to put digital facsimiles online, since there are serious privacy concerns in which items are unable to be redacted once exposed online. Finally, the current mentality of the archivists is only enabled by the willingness of archivists to engage in mundane tasks, which often prevent them from using their abilities to their fullest capabilities. 
+	\paragraph{}The new mentality we propose uses electronic proximity in lieu of geographic proximity in order to privilege over multiple dimensions instead of only over one dimension. Since the user does much of the digital sorting instead of the archivist, this saves a nontrivial amount of time while also enabling the existence of dynamic sorting that caters to each individual user's need. The central idea of our new mentality advises that the archival role only involves reading and properly censoring items instead of sorting, since it will enable our users to sort based on their own preferences. The ability of users to search material has changed with the advent of computers, and so current assumptions about the world have changed. Therefore, the allowance of multi-dimensional searching capabilities is a factor of new technology that should be taken advantage of. In addition, the new mindset involves getting rid of the do-it-only-once mindset that archivists have in which sorting can only happen once. In keeping with the theme that has been introduced throughout our course this semester, the new mentality also encourages that a software specialist is added to the team, so that the idea of consultation and programming can be the responsibility of an added individual instead of another archivist. This also enables many inefficiencies to be targeted from an outside mindset which diminishes the probability that the archival process will be limited by antiquated mindsets. This method of optimization also makes the archivists' time usage more efficient. Finally, one of the greatest changes in mentality involve that of the archivists themselves; we advise that archivists should not be willing to read through large extensive emails or spend tedious expanses of time in typing into XML plain text documents, since there are many more ways to automate tasks that are done repeatedly. With extra time, archivists are able to devote much more of their time in doing what they do best - understanding objects and building relationships between different objects, both of which are beyond the reach of any machine.
+
+\chapter{Acknowledgements}
+	\paragraph{} For our class, the members of Engineering Sciences and Computer Science 96 dealt with Houghton and Schlesinger libraries as examples of the Harvard Special Collections. We examined their workflows and their processes, what comes in and what goes out, and what sort of products they like to produce at the end of the process. We are indebted to the directors, archivists, librarians and support-staff at Houghton and Schlesinger for their generosity and their invaluable advice. We have been in almost constant contact with them since the beginning of the semester, and some of their concerns and thoughts have proven very helpful for guiding our final products. We were told to make sure that, whatever our solution was to the problem of the backlog, it would also work for less technically-savvy individuals, people who are used to the current system and the static finding aid and who would have a difficult time changing their research process completely. Staff members expressed concern that, if we did not physically sort the items, that we would not be able to locate all of the items correctly. When we presented the idea of a ``digitize as you go" scheme, some of the archivists expressed concern over taking pictures during pre-processing and processing for reasons of time, privacy, data infrastructure, and the task of formally identifying pictures and linking them to the records. We also met with archivists in early March to demonstrate our new process, and from them we received invaluable advice about concerns to watch for, such as privacy problems, the dangerous nature of an automatic Library of Congress fill-in system, and the limitations of a scheme that digitizes a work immediately. These concerns and criticisms were invaluable to our process.
+	\paragraph{} Without the help of many of the librarians and archival staff, we could not have developed a thorough and complete understanding of the Harvard Library special collections and this project would not have been possible. At this time, we would like to extend our deepest gratitude to the following members who have helped us tremendously through this term:
+	\begin{itemize}
+	\item William Stoneman, Florence Fearrington Librarian of Houghton Library
+	\item Marilyn Dunn, Executive Director of Schlesinger Library
+	\item Susan Pyzynski, Associate Librarian for Technical Services
+	\item Suzanne Denison, Project Archivist
+	\item Rachel Howarth, Associate Librarian for Public Services
+	\item Melanie Wisner, Accessioning Archivist
+	\item Irina Kiyagin, Project Archivist
+	\item Alison Harris, Archival Assistant
+	\item Mary Murphy, Manuscript Cataloguer / Processor, and her team who digitized the Ida Pruitt Collection
+	\end{itemize}
+
+{\appendix
+	\chapter{\large{Cataloging Checklist}}
+	\includepdf[pages={1}]{cataloguing.pdf}
+	%\begin{center}
+	%\includegraphics[width=130mm]{cataloguing.pdf}
+	%\end{center}
+	
+	\chapter{\large{Frame technical specifications}}
+	\section{Side View}
+	\begin{center}
+	\includegraphics[width=50mm]{B1.jpg}
+	\end{center}
+	
+	\section{Top View}
+	\begin{center}
+	\includegraphics[width=100mm]{B2.jpg}
+	\end{center}
+	
+	\section{Front View}
+	\begin{center}
+	\includegraphics[width=50mm]{B3.jpg}
+	\end{center}
+	
+	\section{Angled View}
+	\begin{center}
+	\includegraphics[width=50mm]{B4.jpg}
+	\end{center}
+	
+	\chapter{\large{API Documentation (JSON and XML)}}
+
+	\includepdf[pages={1}]{code.pdf}
+	\includepdf[pages={1}]{code1.pdf}
+	
+	\chapter{\large{Getting started guide}}
+	\section{Web Services}
+	\textbf{These instructions are for Debian Linux OS, like Ubuntu, and might not work for other systems.}
+	\begin{enumerate}
+	\item Clone the repo into the /var/www/backend-lib folder (or other one of your choice)
+git clone git@github.com:ES96Library/workbench.git \\ 
+	\hlin
+	\item Install Ruby, Rubygems, Rails version 3 or above, and MySQL\\
+	sudo apt-get install ruby-full build-essential\\
+	sudo apt-get install rubygems\\
+	export PATH=/var/lib/gems/1.8/bin:\$PATH\\
+	sudo aptitude install libfcgi-dev\\
+	sudo gem install rails\\
+	sudo apt-get install mysql-server mysql-client\\
+	sudo apt-get install libmysql-ruby libmysqlclient-dev\\
+	sudo gem install mysql\\
+	\hlin
+	\item Install Nginx and Passenger-Phusion as the server\\
+	gem install passenger\\
+	passenger-install-nginx-module\\
+	\hlin
+	\item Configure Nginx to work with Rails\\
+	\href{http://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx}{Installing Nginx and Hooking into Your Rails app}\\
+	\hlin
+	\item Connect Rails to your MySQL server\\
+	{\em In your config/database.yml file:}\\
+	development:\\ 
+  	adapter: `mysql2'  \# Rails 3.x uses the mysql2 adapter\\
+  	encoding: `utf8'\\
+  	database: `your\_database\_name\_in\_MySQL'\\
+  	username: `MySQL\_user\_name'\\ 
+  	password: `MySQL\_password'\\ 
+  	socket: /var/run/mysqld/mysqld.sock\\
+	\hlin
+	\item Install dependencies and run initial migrations:\\
+	cd /var/www/backend-lib\\
+	bundle install\\
+	rake db:migrate\\
+	\hlin
+	\item Start Nginx\\
+	/etc/init.d/nginx start\\
+	
+	\end{enumerate}
+	\pagebreak
+	\section{Local Software}
+	\begin{enumerate}
+	\item Configure the USB button to right click upon pressing. For Griffin Technology Powermate USB buttons, this can be done easily using the manufacturer's software available at: \\
+	$$\fb{\te{\url{http://www.griffintechnology.com/support/powermate}}}$$
+	\underline{Note}: This only needs to occur upon first installing the Archivist Workstation.\\
+	\hlin
+	\item Configure the Canon camera to take images remotely and save them as JPEGs to the directory "Archivist Speedster/New"
+	\begin{itemize}
+	\item Install the Canon EOS software suite via the CD that comes with the camera.
+	\item Open  EOS  Remote  Capture  and  go  to  properties.   
+	\item Configure Save-Path to "Archivist Speedster/New"
+	\item On  the  EOS  Remote  Capture  main  screen,  right  click  on  RAW  to  open  a  drop  down  menu.  On  the   drop  down,  select  the  quality  of  image  desired.  For  this  implementation,  we  recommend  the  M-?? fine  option  to  balance  processing  speed  and  quality. \\
+	\underline{Note}: This only needs to occur upon first installing the Archivist Workstation.\\
+	\hlin
+	\end{itemize}
+	\item   Initiate  the  batch  file  that  looks  for  new  images  and  captures  QR  code  images.  (Make  sure  all   equipment  is  plugged  in,  you  are  connected  to  the  internet,  and  the  webcams  are  lined  up  with  their   respective  QR  codes.) 
+	\begin{itemize}
+	\item Double-click {\em sendKeys.bat} file in ``Archivist Speedster
+	\item Optional: You may close the command window at any time and the processing will happen in the background.
+	\item To  terminate  this  script,  press  Ctrl-C  and  then  type  Y  and  Enter  on  the  command  window. \\
+	\hlin
+	\end{itemize}
+	\item Initiate  the  Matlab  code  to  process  items  and  post  to  server. 
+	\begin{itemize}
+	\item In ``Archivist Speedster," open {\em control.m} with Matlab.
+	\item When  Matlab  is  fully  open  and  initialized,  press  run  in  the  editor  (or  the  F5  key)  for  {\em control.m} 
+	\item Do  not  close  out  of  Matlab  as  the  process  will  not  occur  in  the  background.  Simply  minimize  
+Matlab. 
+	\item To  end  the  Matlab  script,  press  Ctrl-C  in  the  Matlab  command  window. 
+	\hlin
+	\end{itemize}
+	\item Begin capturing images.
+	\begin{itemize}
+	\item Minimize  all  windows  except  EOS  Remote  Capture. 
+	\item Hover  the  mouse  pointer  over  the  capture  button  on  the  EOS  Remote  Capture  software. 
+	\item Turn  off  the  wireless  mouse  so  as  not  to  accidentally  move  the  pointer's  location  on  the  screen. 
+	\item Optional:  Turn  off  the  computer  monitor  as  it  is  no  longer  necessary  until  imaging  is  complete.  
+Do  not  turn  off  the  computer  itself. 
+	\end{itemize}
+	\end{enumerate}
+
+
+\begin{thebibliography}{99}
+\bibitem{2} Ellen Shea, Schlesinger Library, 2/15
+\bibitem{3} Rachel Howarth, Houghton Library, 2/23
+\bibitem{4} Susan Pzynski
+\bibitem{5} Heather Cole
+\bibitem{6} Susan Denison
+\bibitem{7} Susan Pyzynski and William Stoneman, 2/27
+\bibitem{8} Marilyn Dunn, 2/16
+\bibitem{9} https://aeon.hul.harvard.edu/
+\bibitem{10} Schlesinger Library
+\bibitem{11} Todd Bachmann
+\bibitem{12} Schlesinger Oversight Committee
+\bibitem{13} Software is open source, GNU license: \url{http://batchloaf.wordpress.com/commandcam/}
+\bibitem{14} Open source, Apache License 2.0: \url{http://code.google.com/p/zxing/}
+\bibitem{15} \url{http://www.mathworks.com/matlabcentral/fileexchange/15985-fast-rgb2hsv/content/rgb2hsv_fast.m}
+\bibitem{16} Alexander Ihlow, Germany, Version 1.1  2006-11-02, website: \url{http://www.mathworks.com/matlabcentral/fileexchange/15985-fast-rgb2hsv}
+\bibitem{17} Matthew J. Simoneau, June 2005  Copyright 1984-2007 The MathWorks, Inc., website: \url{http://www.mathworks.com/matlabcentral/fileexchange/27189-urlreadpost-url-post-method-with-binary-file-uploading/content/urlreadwrite.m}
+\end{thebibliography}
+
+\addcontentsline{toc}{chapter}{References}
+
+
+\end{document}  
